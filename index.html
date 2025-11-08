@@ -130,11 +130,19 @@ function searchSection() {
     alert("No section found!");
   }
 }
+
+document.getElementById("searchInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchSection();
+  }
+}); 
 </script>
   
   
 </body>
 </html>
+
 
 
 
