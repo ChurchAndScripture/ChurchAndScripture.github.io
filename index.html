@@ -3,8 +3,11 @@
   <title>Church and Scripture</title>
 </head>
 <body style="font-family: Arial; background-color: #f5f5f5; color: #222; margin: 40px;">
-  <h1 style="color: darkblue;">Church And Scripture</h1>
-  <h2>CAS on Praying to Saints</h2>
+<input type="text" id="searchInput" placeholder="Search sections..." />
+<button onclick="searchSection()">Go</button> 
+  
+<h1 style="color: darkblue;">Church And Scripture</h1>
+  <h2 id="saints">CAS on Praying to Saints</h2>
   <p style="line-height: 1.6;">
 Starting off , James 5:16 says
 “Confess your trespasses to one another, and pray for one another, that you may be healed. The effective, fervent prayer of a righteous man avails much.”
@@ -22,7 +25,7 @@ Now, Luke 20:37-38 shows saints are alive with God as it is said, "For he is not
     through Christ not place. This is called the Communion of Saints.
   </p>
 
-  <h2> CAS on Protestantism </h2>
+  <h2 id="protestantism">CAS on Protestantism </h2>
 
 <p style="line-height: 1.6;">
 There are many different views on Protestantism and many sects in this denomination that differ in theology, worship and practice. However, they all believe in
@@ -55,10 +58,32 @@ There are many different views on Protestantism and many sects in this denominat
   accidently lead you into heretical beliefs. We have now finished with the 5 Solas and the authority of the Bible so that leaves the sacraments.
 
 </p>
+<script>
+function searchSection() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const sections = document.querySelectorAll("h2");
 
+  let found = false;
+
+  sections.forEach(section => {
+    if (section.innerText.toLowerCase().includes(input)) {
+      section.scrollIntoView({ behavior: "smooth" });
+      section.style.backgroundColor = "#ffff99"; // highlight yellow
+      setTimeout(() => section.style.backgroundColor = "", 2000);
+      found = true;
+    }
+  });
+
+  if (!found) {
+    alert("No section found!");
+  }
+}
+</script>
+  
   
 </body>
 </html>
+
 
 
 
