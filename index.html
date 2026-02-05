@@ -1,54 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Church and Scripture</title>
 
 <link rel="icon" type="image/png" href="/favicon.png">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-}
-
-.hero {
-  height: 100vh;
+  
+  <style>
+/* Make the search bar sit nicely at the top */
+#searchContainer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-input {
-  width: 300px;
-  padding: 12px;
+/* Input field style */
+#searchInput {
+  padding: 10px 15px;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
   font-size: 16px;
+  outline: none;
+  transition: 0.3s;
 }
 
-.section {
-  padding: 60px;
-  display: none;
+/* Input glow on focus */
+#searchInput:focus {
+  border-color: #555;
+  box-shadow: 0 0 5px #999;
+}
+
+/* Search button style */
+#searchButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+#searchButton:hover {
+  background-color: #555;
 }
 </style>
+
+  
+  <title>Church and Scripture</title>
 </head>
+<body style="font-family: Arial; background-color: #f5f5f5; color: #222; margin: 40px;">
+<input type="text" id="searchInput" placeholder="Search sections..." />
+<button onclick="searchSection()">Go</button> 
+  
+<h1 style="color: darkblue;">Church And Scripture</h1>
+  <h2 id="saints">CAS on Praying to Saints</h2>
+  <p style="line-height: 1.6;">
+Starting off, James 5:16 says
+“Confess your trespasses to one another, and pray for one another, that you may be healed. The effective, fervent prayer of a righteous man avails much.”
+This verse tells us to confess sins to one another and pray for them as a strong prayer can help a righteous man. We know from 2 Corinthians 5:21, 1 John
+    3:2-3 and Hebrews 12:23 that the most righteous people are us when we are in heaven stated clearly in scripture. Another point is that nothing not saved
+    from sin or unclean shall enter the kingdom of heaven mentioned in Revelation 21:27. John 9:31 tells us God will not hear of sinners (who don’t follow
+    Gods law of repentance). And 1 John 5:16 asks us to intercede for those who sin but don’t reject God. But it is said only if they commit sins that do 
+    not lead to eternal damnation . In 1 Corinthians 6:9-10 and many other pieces of scripture it tells us what sins lead to eternal damnation if left
+    unrepented of. So with this, if saints are alive in heaven, they are praying for us. As 1 Timothy 2:1 states to pray for your brothers and sisters
+    and the most righteous people (those who are in heaven) follow scripture to the letter. Luke 20:37-38 shows saints are alive with God as it is said, "For he is not a God of the dead, but of the living: for all live unto him." Now at the 
+    end of these verses it says all live, not just Abraham, Isaac and so on. A really important piece of scripture for Eastern Orthodoxy really helps us acknowledge
+    praying to/asking saints. It really focuses on the early, true understanding of the first language Bible. Finally, ending this chapter, Romans 8:38-39 are the
+    verses that explain the Church is one on Earth and in Heaven as it states in simpler words, death does not divide the body of Christ, instead it is united 
+    through Christ not place. This is called the Communion of Saints.
+  </p>
 
-<body>
+  <h2 id="protestantism">CAS on Protestantism </h2>
 
-<div class="hero">
-  <h1>Church and Scripture</h1>
-  <input id="search" placeholder="Search topics..." onkeyup="search()">
-</div>
-
-<div id="protestantism" class="section">
-<h2>Protestantism</h2>
-<p>There are many different views on Protestantism and many sects in this denomination that differ in theology, worship and practice. However, they all believe in
+<p style="line-height: 1.6;">
+There are many different views on Protestantism and many sects in this denomination that differ in theology, worship and practice. However, they all believe in
   the 5 Solas, authority of the Holy Bible and generally the 2 sacraments. Starting with the 5 Solas, they are the principles originating around the 16th century
   reformation when Protestantism stands on. They include of Sola Scriptura, Sola Fide, Sola Gratia, Solus Christus and Soli Deo Gloria. The claim from Protestants
   is the Bible alone is the ultimate authority for faith and practice which of course is the idea of Sola Scriptura. Now the way CAS and/or Eastern Orthodoxy
@@ -82,28 +115,13 @@ input {
   instituted by Christ in scripture. However, from the Gospels to Acts it states every sacrament from Confession to Marriage. Another point is that us Orthodox
   Christians reject limiting grace to only 2 sacraments as salvation thrives and lives through the life of the Church and not just in scripture.
 </p>
-</div>
 
-<div id="saints" class="section">
-<h2>Praying to Saints</h2>
-<p>Confess your trespasses to one another, and pray for one another, that you may be healed. The effective, fervent prayer of a righteous man avails much.”
-This verse tells us to confess sins to one another and pray for them as a strong prayer can help a righteous man. We know from 2 Corinthians 5:21, 1 John
-    3:2-3 and Hebrews 12:23 that the most righteous people are us when we are in heaven stated clearly in scripture. Another point is that nothing not saved
-    from sin or unclean shall enter the kingdom of heaven mentioned in Revelation 21:27. John 9:31 tells us God will not hear of sinners (who don’t follow
-    Gods law of repentance). And 1 John 5:16 asks us to intercede for those who sin but don’t reject God. But it is said only if they commit sins that do 
-    not lead to eternal damnation . In 1 Corinthians 6:9-10 and many other pieces of scripture it tells us what sins lead to eternal damnation if left
-    unrepented of. So with this, if saints are alive in heaven, they are praying for us. As 1 Timothy 2:1 states to pray for your brothers and sisters
-    and the most righteous people (those who are in heaven) follow scripture to the letter. Luke 20:37-38 shows saints are alive with God as it is said, "For he is not a God of the dead, but of the living: for all live unto him." Now at the 
-    end of these verses it says all live, not just Abraham, Isaac and so on. A really important piece of scripture for Eastern Orthodoxy really helps us acknowledge
-    praying to/asking saints. It really focuses on the early, true understanding of the first language Bible. Finally, ending this chapter, Romans 8:38-39 are the
-    verses that explain the Church is one on Earth and in Heaven as it states in simpler words, death does not divide the body of Christ, instead it is united 
-    through Christ not place. This is called the Communion of Saints.
-</p>
-</div>
+<h2 id="councils">CAS on Church Councils</h2>
 
-<div id="councils" class="section">
-<h2>Church Councils</h2>
-<p>Let's address the big question first, what exactly is a Church Council? Well a Church Council is a formal meeting of main church leaders or bishops discussing 
+<h3 id="first-council-of-nicaea">First Council of Nicaea</h3>
+  
+  <p style="line-height: 1.6;">
+Let's address the big question first, what exactly is a Church Council? Well a Church Council is a formal meeting of main church leaders or bishops discussing 
     arising problems or questions of faith that need to be answered. The first council (regional) occurred in 49 AD but the first ecumenical council happened
     in 325 AD. The last official ecumenical council was in 787 AD however Eastern Orthodoxy believes that any more councils can be approved if they are guided 
     by the Holy Spirit. Now the first one in 325 AD was The Council of Nicaea and it was called by Emperor Constantine the Great to discuss the issue about the
@@ -118,21 +136,63 @@ This verse tells us to confess sins to one another and pray for them as a strong
     to the argument is that Jesus the Son is eternally begotten meaning he shares the same essence as the Father. Finally, the council ended with the bishops 
     condemning Arianism as heretical and creating the Nicene Creed we know today.
 </p>
-</div>
-
   
 <script>
-function search() {
-  let value = document.getElementById("search").value.toLowerCase();
+function searchSection() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const sections = document.querySelectorAll("h2");
 
-  document.querySelectorAll(".section").forEach(s => s.style.display="none");
+  let found = false;
 
-  if(value.includes("protestant")) document.getElementById("protestantism").style.display="block";
-  if(value.includes("saint")) document.getElementById("saints").style.display="block";
-  if(value.includes("council")) document.getElementById("councils").style.display="block";
+  sections.forEach(section => {
+    if (section.innerText.toLowerCase().includes(input)) {
+      section.scrollIntoView({ behavior: "smooth" });
+      section.style.backgroundColor = "#ffff99"; // highlight yellow
+      setTimeout(() => section.style.backgroundColor = "", 2000);
+      found = true;
+    }
+  });
 
+  if (!found) {
+    alert("No section found!");
+  }
 }
-</script>
 
+document.getElementById("searchInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchSection();
+  }
+}); 
+</script>
+  
+  
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
